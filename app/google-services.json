@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "548620949291",
+    "project_id": "barky-9c416",
+    "storage_bucket": "barky-9c416.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548620949291:android:63176743925f1f3c96976e",
+        "android_client_info": {
+          "package_name": "hr.algebra.barky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548620949291-dd6rrvq1fb4vj58frv667o7ho7igfive.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-S3cxVvmbV85gXStkjFOtvKnQk5kGjr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548620949291-dd6rrvq1fb4vj58frv667o7ho7igfive.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

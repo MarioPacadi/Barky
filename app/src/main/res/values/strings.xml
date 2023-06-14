@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Barky</string>
+    <string name="cinema">Cinema</string>
+    <string name="made">Made by CroSuperMario</string>
+    <string name="dogs">Dogs</string>
+    <string name="map">Map</string>
+    <string name="about">About</string>
+    <string name="authentication">Authentication</string>
+    <string name="person">Person</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="unable_to_login">Unable to log in</string>
+    <string name="unable_to_register">Unable to register</string>
+    <string name="close">close</string>
+    <string name="preview">Preview</string>
+    <string name="delete">Delete</string>
+    <string name="title_activity_upload_screen">UploadScreen</string>
+    <string name="guest">Guest</string>
+    <string name="profile">Profile</string>
+    <string name="addphotos">Add Photos</string>
+    <string name="gallery">gallery</string>
+    <string name="update">Update</string>
+    <string name="unable_to_update">Unable to Update</string>
+</resources>
