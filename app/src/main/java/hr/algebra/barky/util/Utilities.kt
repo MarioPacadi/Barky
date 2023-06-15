@@ -9,6 +9,10 @@ import com.google.android.gms.maps.model.BitmapDescriptor
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.firebase.firestore.DocumentSnapshot
 import java.text.SimpleDateFormat
+import java.time.Instant
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 import java.util.*
 import java.util.regex.Pattern
 import kotlin.collections.HashMap
@@ -132,5 +136,12 @@ fun getCurrentDateTime(pattern: String="MMMM d, yyyy 'at' hh:mm:ss a z"): String
 
 fun getCurrentTime(): Long {
     return Calendar.getInstance().timeInMillis
+}
+
+fun Long.formatDateTime(pattern: String="yyyy-MM-dd HH:mm:ss"): String {
+    val instant = Instant.ofEpochMilli(this)
+    val dateTime = LocalDateTime.ofInstant(instant, ZoneId.systemDefault())
+    val formatter = DateTimeFormatter.ofPattern(pattern)
+    return dateTime.format(formatter)
 }
 

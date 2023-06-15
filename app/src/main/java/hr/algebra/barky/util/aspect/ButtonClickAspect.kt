@@ -6,6 +6,7 @@ import org.aspectj.lang.annotation.After
 import org.aspectj.lang.annotation.Around
 import org.aspectj.lang.annotation.Aspect
 
+@Suppress("unused")
 @Aspect
 class ButtonClickAspect {
 

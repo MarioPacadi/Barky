@@ -9,13 +9,13 @@ import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-object FirestoreRepository {
+object FirestoreRepository : IFirestoreRepo {
 
-    public val db by lazy {
+    val db by lazy {
         Firebase.firestore
     }
 
-    fun <T>getAllValuesFromCollection(collectionName : String, clazz: Class<*>, callback:(HashMap<String, T>)->Unit) {
+    override fun <T>getAllValuesFromCollection(collectionName : String, clazz: Class<*>, callback:(HashMap<String, T>)->Unit) {
         val collectionRef = db.collection(collectionName)
         collectionRef.get()
             .addOnSuccessListener { documents ->
@@ -73,7 +73,7 @@ object FirestoreRepository {
             }
     }
 
-    fun addClassToCollection(collectionName : String, value : Any,onSuccess:(String)->Unit={}){
+    override fun addClassToCollection(collectionName : String, value : Any, onSuccess:(String)->Unit){
         val variableMap = getVariableMap(value)
         Log.w("Variable name:", "$variableMap")
         // Add a new document with a generated ID
@@ -88,7 +88,7 @@ object FirestoreRepository {
             }
     }
 
-    fun update(collectionName : String, fieldName: String, searchParam : Any, updatedValue: Any, callback:(Boolean)->Unit={}) {
+    override fun update(collectionName : String, fieldName: String, searchParam : Any, updatedValue: Any, callback:(Boolean)->Unit) {
         val collectionRef = db.collection(collectionName)
         collectionRef.whereEqualTo(fieldName, searchParam)
             .get()
@@ -105,7 +105,7 @@ object FirestoreRepository {
             }
     }
 
-    fun delete(collectionName : String, fieldName: String, searchParam : Any, callback:(Boolean)->Unit={}) {
+    override fun delete(collectionName : String, fieldName: String, searchParam : Any, callback:(Boolean)->Unit) {
         val collectionRef = db.collection(collectionName)
         collectionRef.whereEqualTo(fieldName, searchParam)
             .get()

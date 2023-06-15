@@ -1,6 +1,7 @@
 package hr.algebra.barky.view.nav
 
 import android.content.Context
+import android.widget.Toast
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
@@ -34,7 +35,7 @@ fun NavGraphBuilder.authNavGraph(
                             navController.navigate(Graph.MAIN)
                         },
                         onFail = {
-                            //Toast.makeText(context,context.getString(R.string.unable_to_login),Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context,context.getString(R.string.unable_to_login),Toast.LENGTH_SHORT).show()
                         }
                     )
                 },
@@ -64,7 +65,7 @@ fun NavGraphBuilder.authNavGraph(
                             navController.navigate(Graph.MAIN)
                         },
                         onFail = {
-                            //Toast.makeText(context,context.getString(R.string.unable_to_register),Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context,context.getString(R.string.unable_to_register),Toast.LENGTH_SHORT).show()
                         }
                     )
                 },
