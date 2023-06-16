@@ -195,13 +195,8 @@ fun AuthenticationScreen(
                             onClick = if (isLogin) onRegister else onLogin,
                         )
                     }
-
                 }
-
-
             }
-
         }
-
     }
 }
