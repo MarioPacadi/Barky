@@ -10,7 +10,7 @@ import org.aspectj.lang.annotation.Aspect
 @Aspect
 class ButtonClickAspect {
 
-    @After("execution(* androidx.compose.foundation.clickable.Clickable.invoke(..)) && args(onClick)")
+    @After("execution(* androidx.compose.foundation.clickable.Clickable.invoke(..))")
     fun onButtonClick() {
         val message="Button was Clicked"
         Log.w("LoggingVM", message)

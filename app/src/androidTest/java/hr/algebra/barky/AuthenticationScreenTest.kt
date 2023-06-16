@@ -1,12 +1,6 @@
 package hr.algebra.barky
 
 import android.annotation.SuppressLint
-import android.content.Context
-import android.widget.Toast
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
@@ -17,14 +11,12 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import hr.algebra.barky.state.AuthenticationState
 import hr.algebra.barky.state.PackageState
-import hr.algebra.barky.ui.theme.DogsAppTheme
 import hr.algebra.barky.view.auth.AuthenticationScreen
-import hr.algebra.barky.viewmodel.PackageViewModel
 import org.junit.Assert
-import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import hr.algebra.barky.R
 
 @SuppressLint("ComposableNaming")
 @OptIn(ExperimentalPagingApi::class)
